@@ -1,10 +1,14 @@
 class Hello {
     public static void main(String a[]) {
         
-        int num1 = 3;
-        int num2 = 5;
-        int result = num1 + num2;
-        System.out.println(result);
+        byte b = 127;
+        short sh = 558;
+        long l = 5854l;
+        float f = 6.5f;
+        double d = 5.8;
+        char c = 'k';
+        boolean bool = true;
+        System.out.println();
         
     }
 }
