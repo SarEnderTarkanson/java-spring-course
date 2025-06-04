@@ -1,14 +1,12 @@
 class Hello {
-    public static void main(String a[]) {
+    public static void main(String args[]) {
 
-        int num1 = 0b101;
-        System.out.println(num1);
 
-        char abc = 'a';
-        System.out.println(abc);
+        byte a = 10;
+        byte b = 30;
 
-        abc = abc++;
-        System.out.println(abc);
+        int result = a * b;
 
+        System.out.println(result);
     }
 }
