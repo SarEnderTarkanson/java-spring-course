@@ -1,24 +1,12 @@
 class Hello {
     public static void main(String args[]) {
 
-        int num1 = 7;
-        System.out.println(num1);
-        // int num2 = 5;
+        double x = 9.8;
+        double y = 5.7;
 
-        // int result = num1 % num2;
+        boolean result = x != y;
 
-        num1++; //8
-        System.out.println(num1);
-        num1 += 5; //13
-        System.out.println(num1);
-        num1--; //12
-        System.out.println(num1);
-
-        int result = ++num1;
         System.out.println(result);
-
-        int result2 = num1++;
-        System.out.println(result2);
 
     }
 }
