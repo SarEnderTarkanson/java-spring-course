@@ -1,17 +1,17 @@
 class Demo {
     public static void main(String args[]) {
 
-        int x = 8;
-        int y = 7;
-        int z = 9;
+        int n = 4;
+        int result = 0;
 
-        if (x > y && x > z) {
-            System.out.println(x);
-            // System.out.println("Thank you");
-        } else if (y > z && y > z)
-            System.out.println(y);
-        else
-            System.out.println(z);
+        // if (n % 2 == 0)
+        // result = 10;
 
+        // else
+        // result = 20;
+
+        result = n % 2 == 0 ? 10 : 20;
+
+        System.out.println(result);
     }
 }
