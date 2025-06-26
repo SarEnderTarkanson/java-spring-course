@@ -1,25 +1,25 @@
-class Computer {
-    public void playMusic() {
+class Calculator {
 
-        System.out.println("Playing music...");
+    public int add(int n1, int n2, int n3) {
+        return n1 + n2 + n3;
     }
 
-    public String getMeAPen(int cost) {
-        if (cost >= 10) {
-            return "Here is your pen";
-        }
-        return "The amount is too low for a pen";
+    public int add(int n1, int n2) {
+        return n1 + n2;
+    }
+
+    public double add(double n1, int n2) {
+        return n1 + n2;
     }
 }
 
 public class Demo {
     public static void main(String args[]) {
 
-        Computer obj = new Computer();
+        Calculator obj = new Calculator();
 
-        obj.playMusic();
-        String str = obj.getMeAPen(10);
-        System.out.println(str);
+        int r1 = obj.add(3, 4);
 
+        System.out.println(r1);
     }
 }
