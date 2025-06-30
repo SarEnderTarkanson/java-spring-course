@@ -1,11 +1,19 @@
 public class Demo {
     public static void main(String args[]) {
-        String name = new String("alpy");
-        String nameNewMethod = "alpy";
+        // String name = new String("Alpy");
+        // String nameNewMethod = "Alpy";
 
-        System.out.println("Hello " + name);
-        System.out.println(name.charAt(3));
-        System.out.println(name.concat(" Tarkan"));
+        // name = name + " Tarkan";
+        // System.out.println("Hello " + name);
+
+        String name = "Alpy";
+        String name2 = "Alpy";
+
+        name = "Endo";
+        // error ---> name.charAt(0) = 'X';
+        System.out.println(name);
+
+        System.out.println(name == name2);
     }
 
 }
