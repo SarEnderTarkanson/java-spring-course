@@ -1,19 +1,19 @@
 public class Demo {
     public static void main(String args[]) {
-        // String name = new String("Alpy");
-        // String nameNewMethod = "Alpy";
+        
+        String endo = new String("Endo");
 
-        // name = name + " Tarkan";
-        // System.out.println("Hello " + name);
+        endo = "Beyza";
 
-        String name = "Alpy";
-        String name2 = "Alpy";
+        StringBuffer sb = new StringBuffer("Alpy");
 
-        name = "Endo";
-        // error ---> name.charAt(0) = 'X';
-        System.out.println(name);
+        sb.append(" Tarkanson");
 
-        System.out.println(name == name2);
+        sb.deleteCharAt(10);
+
+        sb.insert(0, "Mr. ");
+
+        System.out.println(sb);
     }
 
 }
