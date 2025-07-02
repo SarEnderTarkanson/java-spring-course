@@ -1,19 +1,29 @@
+
+class Mobile {
+    String brand;
+    int price;
+    static String name;
+
+    public void show() {
+        System.out.println(brand + " | " + price + " | " + name);
+    }
+}
+
 public class Demo {
     public static void main(String args[]) {
-        
-        String endo = new String("Endo");
 
-        endo = "Beyza";
+        Mobile obj = new Mobile();
+        obj.brand = "Apple";
+        obj.price = 12500;
+        Mobile.name = "SmartPhone";
 
-        StringBuffer sb = new StringBuffer("Alpy");
+        Mobile obj2 = new Mobile();
+        obj2.brand = "Samsung";
+        obj2.price = 17500;
+        Mobile.name = "SmartPhone";
 
-        sb.append(" Tarkanson");
-
-        sb.deleteCharAt(10);
-
-        sb.insert(0, "Mr. ");
-
-        System.out.println(sb);
+        obj.show();
+        obj2.show();
     }
 
 }
