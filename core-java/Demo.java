@@ -9,6 +9,16 @@ class Human {
         name = "John Doe";
     }
 
+    // public Human(int a, String n) {
+    //     age = a;
+    //     name = n;
+    // }
+
+    public Human(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
     public int getAge() {
         return age;
     }
@@ -34,8 +44,7 @@ public class Demo {
         obj.setAge(39);
         obj.setName("Alpy");
 
-        Human obj2 = new Human();
-        
+        Human obj2 = new Human(38, "Makbule");
 
         System.out.println(obj.getAge());
         System.out.println(obj.getName());
