@@ -1,38 +1,35 @@
 
-class Mobile {
-    String brand;
-    int price;
-    static String name;
+class Human {
 
-    static {
-        name = "Phone";
-        System.out.println("in static block");
+    private int age;
+    private String name;
+
+    public int getAge() {
+        return age;
     }
 
-    public Mobile(){
-        brand = "";
-        price = 200;
-        System.out.println("in constructor");
+    public String getName() {
+        return name;
     }
 
-    public void show() {
-        System.out.println(brand + " | " + price + " | " + name);
+    public void setAge(int a) {
+        age = a;
     }
 
-
+    public void setName(String b){
+        name = b;
+    }
 }
 
 public class Demo {
-    public static void main(String args[]) throws ClassNotFoundException {
+    public static void main(String args[]) {
 
+        Human obj = new Human();
+        obj.setAge(39);
+        obj.setName("Alpy");
 
-    Class.forName("Mobile");
-        // Mobile obj = new Mobile();
-        // obj.brand = "Apple";
-        // obj.price = 12500;
-        // Mobile.name = "SmartPhone";
-
-        // Mobile obj2 = new Mobile();
+        System.out.println(obj.getAge());
+        System.out.println(obj.getName());
     }
 
 }
