@@ -4,31 +4,35 @@ class Mobile {
     int price;
     static String name;
 
+    static {
+        name = "Phone";
+        System.out.println("in static block");
+    }
+
+    public Mobile(){
+        brand = "";
+        price = 200;
+        System.out.println("in constructor");
+    }
+
     public void show() {
         System.out.println(brand + " | " + price + " | " + name);
     }
 
-    public static void show2(Mobile obj){
-        System.out.println(obj.brand + " | " + obj.price + " | " + name);
-    }
+
 }
 
 public class Demo {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws ClassNotFoundException {
 
-        Mobile obj = new Mobile();
-        obj.brand = "Apple";
-        obj.price = 12500;
-        Mobile.name = "SmartPhone";
 
-        Mobile obj2 = new Mobile();
-        obj2.brand = "Samsung";
-        obj2.price = 17500;
-        Mobile.name = "SmartPhone";
+    Class.forName("Mobile");
+        // Mobile obj = new Mobile();
+        // obj.brand = "Apple";
+        // obj.price = 12500;
+        // Mobile.name = "SmartPhone";
 
-        obj.show();
-        obj2.show();
-        Mobile.show2(obj2);
+        // Mobile obj2 = new Mobile();
     }
 
 }
