@@ -1,32 +1,27 @@
+class Calc {
+    public final void show() {
+        System.out.println("by Alpy");
+    }
 
-class A {
-    public void show() {
-        System.out.println("in A show");
+    public void add(int a, int b) {
+        System.out.println(a + b);
+        ;
     }
 }
 
-class B extends A {
+class AdvCalc extends Calc {
     public void show() {
-        System.out.println("in B show");
-    }
-}
-
-class C extends A {
-    public void show() {
-        System.out.println("in C show");
+        System.out.println("by Endo");
     }
 }
 
 public class Demo {
     public static void main(String args[]) {
-        A obj = new A();
-        obj.show();
 
-        obj = new B();
+        Calc obj = new Calc();
         obj.show();
+        obj.add(5, 5);
 
-        obj = new C();
-        obj.show();
     }
 
 }
