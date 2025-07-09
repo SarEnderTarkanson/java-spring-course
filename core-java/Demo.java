@@ -1,21 +1,32 @@
-import other.*;
 
+class A {
+    public void show() {
+        System.out.println("in A show");
+    }
+}
 
-class C extends A{
-    public void ABC(){
-        System.out.println(marks);
+class B extends A {
+    public void show() {
+        System.out.println("in B show");
+    }
+}
+
+class C extends A {
+    public void show() {
+        System.out.println("in C show");
     }
 }
 
 public class Demo {
     public static void main(String args[]) {
-
         A obj = new A();
-        System.out.println(obj.marks);
         obj.show();
 
-        B obj2 = new B();
-        System.out.println(obj2.marks);
+        obj = new B();
+        obj.show();
+
+        obj = new C();
+        obj.show();
     }
 
 }
