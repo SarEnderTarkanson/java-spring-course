@@ -1,27 +1,16 @@
-class Calc {
-    public final void show() {
-        System.out.println("by Alpy");
-    }
-
-    public void add(int a, int b) {
-        System.out.println(a + b);
-        ;
-    }
-}
-
-class AdvCalc extends Calc {
-    public void show() {
-        System.out.println("by Endo");
-    }
+class Laptop {
+    String model;
+    int price;
 }
 
 public class Demo {
     public static void main(String args[]) {
 
-        Calc obj = new Calc();
-        obj.show();
-        obj.add(5, 5);
+        Laptop obj = new Laptop();
+        obj.model = "Lenovo Yoga";
+        obj.price = 5000;
 
+        System.out.println(obj);
     }
 
 }
