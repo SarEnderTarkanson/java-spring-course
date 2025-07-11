@@ -1,24 +1,24 @@
-class A {
-    public void show1() {
-        System.out.println("in A show");
-    }
-}
-
-class B extends A {
-    public void show2() {
-        System.out.println("in B show");
-    }
-}
 
 public class Demo {
     public static void main(String args[]) {
 
-        A obj = new B();
+        int num = 7;
 
-        obj.show1();
+        Integer num2 = num;
 
-        B obj2 = (B) obj;
-        obj2.show2();
+        int num3 = num2.intValue();
+
+        Integer num4 = 8;
+
+        String str = "12";
+
+        int num5 = Integer.parseInt(str);
+
+
+        System.out.println(num2);
+        System.out.println(num3);
+        System.out.println(num4);
+        System.out.println(num5 * 2);
     }
 
 }
