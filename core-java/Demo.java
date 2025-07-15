@@ -1,34 +1,30 @@
-abstract class Car {
-    public abstract void drive();
+class A {
 
-    public abstract void fly();
+    int age;
 
-    public void playMusic() {
-        System.out.println("play music");
+    public void show() {
+        System.out.println("in show");
     }
-}
 
-abstract class WagonR extends Car {
+    static class B {
+        public void config() {
 
-    public void drive() {
-        System.out.println("Driving...");
-    }
-}
-
-class UpdatedWagonR extends WagonR {
-
-    public void fly() {
-
-        System.out.println("Flying...");
+            System.out.println("in config");
+        }
     }
 }
 
 public class Demo {
     public static void main(String args[]) {
-        Car obj = new UpdatedWagonR();
-        obj.drive();
-        obj.playMusic();
-        obj.fly();
+
+        A obj = new A();
+
+        obj.show();
+
+        A.B obj2 = new A.B();
+
+        obj2.config();
+
     }
 
 }
