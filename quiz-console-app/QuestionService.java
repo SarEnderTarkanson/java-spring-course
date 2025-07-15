@@ -35,4 +35,17 @@ public class QuestionService {
 
     }
 
+    public void printScore() {
+        int score = 0;
+        for (int i = 0; i < questions.length; i++) {
+            Question que = questions[i];
+            String actualAnswer = que.getAnswer();
+            String userAnswer = selection[i];
+
+            if (actualAnswer.equals(userAnswer)) {
+                score++;
+            }
+        }
+        System.out.println("Your score is: " + score);
+    }
 }
