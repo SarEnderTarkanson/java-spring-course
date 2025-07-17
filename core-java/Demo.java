@@ -1,7 +1,7 @@
-class A {
-    public void show() {
-        System.out.println("in A show");
-    }
+abstract class A {
+    public abstract void show();
+
+    public abstract void config();
 }
 
 public class Demo {
@@ -11,8 +11,13 @@ public class Demo {
             public void show() {
                 System.out.println("in new show");
             }
+
+            public void config() {
+                System.out.println("in config");
+            }
         };
         obj.show();
+        obj.config();
 
     }
 
