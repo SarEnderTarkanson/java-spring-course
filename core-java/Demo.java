@@ -1,47 +1,33 @@
-interface A {
-
-    int age = 18;
-    String area = "Steinkjer";
-
-    void show();
-
-    void config();
-}
-
-interface X {
-    void run();
-}
-
-interface Y extends X {
+interface Computer {
+    void code();
 
 }
 
-class B implements A, Y {
-    public void show() {
-        System.out.println("in show");
+class Laptop implements Computer {
+    public void code() {
+        System.out.println("code, compile, run");
     }
+}
 
-    public void config() {
-        System.out.println("on config");
+class Desktop implements Computer {
+    public void code() {
+        System.out.println("code, compile, run: faster");
     }
+}
 
-    public void run() {
-
+class Developer {
+    public void devApp(Computer lap) {
+        lap.code();
     }
 }
 
 public class Demo {
     public static void main(String args[]) {
-        A obj;
-        obj = new B();
-        obj.show();
-        obj.config();
+        Computer lap = new Laptop();
+        Computer desk = new Desktop();
 
-        X obj2 = new B();
-        obj2.run();
-
-        System.out.println(A.age);
-        System.out.println(A.area);
+        Developer alpy = new Developer();
+        alpy.devApp(lap);
     }
 
 }
