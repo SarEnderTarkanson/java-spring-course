@@ -1,24 +1,32 @@
-abstract class A {
-    public abstract void show();
+interface A {
 
-    public abstract void config();
+    int age = 18;
+    String area = "Steinkjer";
+
+    void show();
+
+    void config();
+}
+
+class B implements A {
+    public void show() {
+        System.out.println("in show");
+    }
+
+    public void config() {
+        System.out.println("on config");
+    }
 }
 
 public class Demo {
     public static void main(String args[]) {
-
-        A obj = new A() {
-            public void show() {
-                System.out.println("in new show");
-            }
-
-            public void config() {
-                System.out.println("in config");
-            }
-        };
+        A obj;
+        obj = new B();
         obj.show();
         obj.config();
 
+        System.out.println(A.age);
+        System.out.println(A.area);
     }
 
 }
