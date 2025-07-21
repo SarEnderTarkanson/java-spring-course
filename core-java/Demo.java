@@ -1,13 +1,13 @@
 @FunctionalInterface
 interface A {
-    void show(int i);
+    int add(int i, int j);
 }
 
 public class Demo {
     public static void main(String args[]) {
-        A obj = i -> System.out.println("show " + i);
+        A obj = (i, j) -> i + j;
 
-        obj.show(5);
+        System.out.println(obj.add(5, 10));
     }
 
 }
