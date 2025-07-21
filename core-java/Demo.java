@@ -1,24 +1,13 @@
 @FunctionalInterface
 interface A {
-    void show();
+    void show(int i);
 }
-
-// class B implements A{
-//     public void show(){
-//         System.out.println("in B show");
-//     }
-// }
-
 
 public class Demo {
     public static void main(String args[]) {
-        A obj = new A()
-        {
-            public void show(){
-                System.out.println("in A show");
-            }
-        };
-        obj.show();
+        A obj = i -> System.out.println("show " + i);
+
+        obj.show(5);
     }
 
 }
