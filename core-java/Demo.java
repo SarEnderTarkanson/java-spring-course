@@ -1,23 +1,27 @@
+class AlpyException extends Exception {
+    public AlpyException(String string) {
+        super(string);
+    }
+}
+
 public class Demo {
     public static void main(String args[]) {
-        int i = 0;
+        int i = 20;
         int j = 0;
-
-     
 
         try {
             j = 18 / i;
-            if(j == 0){
-                throw new ArithmeticException("I don't want to print 0.");
+            if (j == 0) {
+                throw new AlpyException("I don't want to print 0.");
             }
         }
 
-        catch (ArithmeticException e) {
-            j = 18 /1;
+        catch (AlpyException e) {
+            j = 18 / 1;
             System.out.println("That's the default output." + e);
         }
 
-        catch (Exception e){
+        catch (Exception e) {
             System.out.println("Something went wrong." + e);
         }
 
