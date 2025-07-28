@@ -1,17 +1,27 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+class A extends Thread{
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("hi");
+        }
+    }
+}
+
+class B extends Thread{
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("hello");
+        }
+    }
+}
 
 public class Demo {
-    public static void main(String args[]) throws IOException {
+    public static void main(String args[]) {
 
-        int num = 0;
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-            num = Integer.parseInt(br.readLine());
-            System.out.println(num);
-        } catch (Exception e) {
-            System.out.println("Something went wrong");
-        }
+        A obj = new A();
+        B obj2 = new B();
+
+        obj.start();
+        obj2.start();
 
     }
 
