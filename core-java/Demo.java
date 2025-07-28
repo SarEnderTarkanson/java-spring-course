@@ -1,50 +1,26 @@
-// class A implements Runnable {
-//     public void run() {
-//         for (int i = 1; i <= 5; i++) {
-//             System.out.println("hi");
-//             try {
-//                 Thread.sleep(10);
-//             } catch (InterruptedException e) {
-//                 e.printStackTrace();
-//             }
-//         }
-//     }
-// }
+class Counter {
 
-// class B implements Runnable {
-//     public void run() {
-//         for (int i = 1; i <= 5; i++) {
-//             System.out.println("hello");
-//             try {
-//                 Thread.sleep(10);
-//             } catch (InterruptedException e) {
-//                 e.printStackTrace();
-//             }
-//         }
-//     }
-// }
+    int count;
+
+    public synchronized void increment() {
+        count++;
+    }
+}
 
 public class Demo {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws InterruptedException {
+
+        Counter c = new Counter();
 
         Runnable obj = () -> {
-            for (int i = 1; i <= 5; i++) {
-                System.out.println("hi");
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            for (int i = 1; i <= 1000; i++) {
+                c.increment();
+
             }
         };
         Runnable obj2 = () -> {
-            for (int i = 1; i <= 5; i++) {
-                System.out.println("hello");
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            for (int i = 1; i <= 1000; i++) {
+                c.increment();
             }
         };
 
@@ -53,6 +29,11 @@ public class Demo {
 
         t1.start();
         t2.start();
+
+        t1.join();
+        t2.join();
+
+        System.out.println(c.count);
 
     }
 
