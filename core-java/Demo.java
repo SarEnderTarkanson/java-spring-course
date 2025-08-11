@@ -1,24 +1,26 @@
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
+import java.util.Iterator;
+import java.util.TreeSet;
 
 public class Demo {
     public static void main(String args[]) {
 
-        List<Integer> nums = new ArrayList<Integer>();
+        Collection<Integer> nums = new TreeSet<Integer>();
 
-        nums.add(6);
-        nums.add(5);
-        nums.add(8);
-        nums.add(2);
+        nums.add(62);
+        nums.add(54);
+        nums.add(82);
+        nums.add(21);
 
-        System.out.println(nums.indexOf(2));;
+        Iterator<Integer> values = nums.iterator();
 
-        System.out.println(nums.get(2));
+        while (values.hasNext())
 
-        for (int n : nums) {
-            System.out.println(n*2);
-        }
+            System.out.println(values.next());
+
+        // for (int n : nums) {
+        // System.out.println(n);
+        // }
 
     }
 
