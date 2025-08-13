@@ -1,27 +1,23 @@
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.TreeSet;
+//import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
 
 public class Demo {
     public static void main(String args[]) {
 
-        Collection<Integer> nums = new TreeSet<Integer>();
+        Map<String, Integer> students = new Hashtable<>();
 
-        nums.add(62);
-        nums.add(54);
-        nums.add(82);
-        nums.add(21);
+        students.put("Alpy", 39);
+        students.put("Beyza", 10);
+        students.put("Ender", 7);
+        students.put("Makbule", 38);
+        students.put("Alpy", 40);
 
-        Iterator<Integer> values = nums.iterator();
+        // System.out.println(students.keySet());
 
-        while (values.hasNext())
-
-            System.out.println(values.next());
-
-        // for (int n : nums) {
-        // System.out.println(n);
-        // }
-
+        for (String key : students.keySet()) {
+            System.out.println(key + ": " + students.get(key));
+        }
     }
 
 }
